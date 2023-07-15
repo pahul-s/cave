@@ -1,0 +1,101 @@
+body {
+    background-color: black; /* Set the background color to solid black */
+    color: white;
+    font-family: serif; /* Set all fonts to a serif font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* The rest of the CSS remains the same */
+
+
+.chat-container {
+    text-align: center;
+}
+
+.chatbox-centered {
+    animation: fadeIn 1s;
+    max-width: 80%; /* Adjust the maximum width of the chatbox */
+    background-color: rgba(0, 0, 0, 0.6); /* Add transparency to the chatbox background */
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden; /* Hide any overflow content */
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.user {
+    color: grey;
+    animation: shaking 2s infinite;
+}
+
+.voice1 {
+    color: white;
+    animation: shaking 2s infinite;
+}
+
+.input-area {
+    position: relative;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    border-bottom: none;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    padding: 5px 0;
+    outline: none;
+}
+
+.blinking-cursor {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 8px;
+    height: 14px;
+    background-color: white;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes shaking {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(0, 4px); }
+    75% { transform: translate(2px, 2px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Add the cave background animation */
+@keyframes cave-background {
+    0%, 100% { background-color: rgba(0, 0, 0, 0.6); }
+    50% { background-color: rgba(0, 0, 0, 0.2); }
+}
